@@ -4,11 +4,11 @@ from mysql.connector import Error
 def create_foodapp_database():
     """Create the entire foodapp database structure from the provided output"""
     try:
-        # Connect to MySQL (without specifying database)
+        # Connect to MySQL without specifying database
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='placeholder'#ur own password
+            password='placeholder'
         )
         
         if connection.is_connected():
@@ -286,4 +286,5 @@ def create_foodapp_database():
             print("\nDatabase connection closed.")
 
 if __name__ == "__main__":
+
     create_foodapp_database()

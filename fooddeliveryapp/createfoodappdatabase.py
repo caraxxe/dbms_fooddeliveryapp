@@ -11,7 +11,7 @@ def create_foodapp_database():
             password='placeholder'
         )
         
-        if connection.is_connected():
+        if  connection.is_connected():
             cursor = connection.cursor()
             
             # Create database
@@ -288,3 +288,4 @@ def create_foodapp_database():
 if __name__ == "__main__":
 
     create_foodapp_database()
+

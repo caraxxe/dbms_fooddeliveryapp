@@ -230,7 +230,7 @@ def show_login_screen():
                     st.error("Invalid admin credentials")
             
             elif role_key == "partner":
-                # FIXED: Correct delivery partner login
+                # FIXED: delivery partner login correct
                 row = fetch_one("SELECT partner_id, name, phone FROM deliverypartner WHERE name=%s AND phone=%s", 
                               (username, password))
                 if row:
@@ -1310,4 +1310,5 @@ def main():
                 show_user_panel()
 
 if __name__ == "__main__":
+
     main()
